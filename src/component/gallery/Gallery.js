@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Lightbox from "react-image-lightbox";
+import { AiOutlinePlus } from "react-icons/ai";
 import "react-image-lightbox/style.css";
 import gallerio from "./gallerio.json";
 import "./gallery.css";
@@ -33,9 +34,14 @@ const GalleryComponent = () => {
 
       <div className="gallery_grid">
         {gallerio.map((gal, index) => (
-          <div className="gallery_sub">
+          <div className="gallery_sub" key={index}>
+            <div
+              className="image-overlay"
+              onClick={() => openLightbox(index)}
+            >
+              <AiOutlinePlus className="plus-icon" />
+            </div>
             <img
-              key={index}
               className="cu"
               src={gal.url}
               alt=""
