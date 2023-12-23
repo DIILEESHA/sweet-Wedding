@@ -1,0 +1,12 @@
+/* Spinner.css */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.imger {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
