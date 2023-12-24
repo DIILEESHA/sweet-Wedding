@@ -48,9 +48,10 @@ const Rsvp = () => {
   };
 
   return (
-    <div className="rsvp" >
-      <div className="form_container" >
-        <form id="rsvp"
+    <div className="rsvp">
+      <div className="form_container">
+        <form
+          id="rsvp"
           ref={formref}
           onSubmit={handlesubmit}
           action="
@@ -157,8 +158,22 @@ const Rsvp = () => {
           </div>
 
           <button className="submit">submit now</button>
+
+          <div className="event_bottom  xy">
+            <img src="https://i.imgur.com/2fGT61B.png" alt="" />
+          </div>
         </form>
       </div>
+      <p className="copyright">
+      &copy; 2023. Design By
+        <a
+          className="linka"
+          href="https://www.facebook.com/profile.php?id=61554751832836&mibextid=rS40aB7S9Ucbxw6v"
+        >
+          SynthSoftSolutions❤️
+        </a>
+        All Rights Reserved.
+      </p>
     </div>
   );
 };

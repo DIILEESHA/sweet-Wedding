@@ -94,10 +94,10 @@
   margin: 50px 0;
 }
 .venue_sub_grid:hover .venue_title {
-  color: teal;
+  color: #fff;
   font-weight: 900;
 }
 .venue_sub_grid:hover .venue_other {
-  color: crimson;
+  color: #fff;
   font-weight: 900;
 }

@@ -29,9 +29,12 @@ const GalleryComponent = () => {
       <img src="https://i.imgur.com/OA7vHkn.png" alt="" className="flower" />
 
       <p className="couple_para">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, quae
-        fuga ipsum quaerat debitis vero suscipit unde maxime iusto
-        necessitatibus placeat odit error earum.
+        Dive into the enchanting 'Moment Gallery' — a visual journey through the
+        joy, love, and cherished memories of our special day. Each photograph
+        captures a unique story, a snapshot of the love and happiness that
+        filled the air during our wedding celebration. Join us in reliving these
+        extraordinary moments that will forever hold a special place in our
+        hearts
       </p>
 
       <div className="gallery_grid">

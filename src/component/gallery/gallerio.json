@@ -1,35 +1,35 @@
 [
-    {
-      "id": 1,
-      "url": "https://i.imgur.com/75rv7GJ.jpg"
-    },
-    {
-      "id": 2,
-      "url": "https://i.imgur.com/8epELHa.jpg"
-    },
-    {
-      "id": 3,
-      "url": "https://i.imgur.com/DkLB4a4.jpg"
-    },
-    {
-      "id": 4,
-      "url": "https://i.imgur.com/8UB5kjn.jpg"
-    },
-    {
-      "id": 5,
-      "url": "https://i.imgur.com/CCNEFTZ.jpg"
-    },
-    {
-      "id": 6,
-      "url": "https://i.imgur.com/u7YstPR.jpg"
-    },
-    {
-      "id": 7,
-      "url": "https://i.imgur.com/5iUpeFq.jpg"
-    },
-    {
-      "id": 7,
-      "url": "https://i.imgur.com/5iUpeFq.jpg"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "url": "https://i.imgur.com/75rv7GJ.jpg"
+  },
+
+  {
+    "id": 2,
+    "url": "https://i.imgur.com/8epELHa.jpg"
+  },
+  {
+    "id": 3,
+    "url": "https://i.imgur.com/NounVuV.jpg"
+  },
+  {
+    "id": 4,
+    "url": "https://i.imgur.com/vaBDHOC.jpg"
+  },
+  {
+    "id": 5,
+    "url": "https://i.imgur.com/u7YstPR.jpg"
+  },
+  {
+    "id": 6,
+    "url": "https://i.imgur.com/5iUpeFq.jpg"
+  },
+  {
+    "id": 7,
+    "url": "https://i.imgur.com/SLuQhVq.jpg"
+  },
+  {
+    "id": 8,
+    "url": "https://i.imgur.com/DkLB4a4.jpg"
+  }
+]

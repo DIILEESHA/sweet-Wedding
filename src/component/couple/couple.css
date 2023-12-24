@@ -19,16 +19,17 @@
 }
 
 .couple_para {
+  font-size: 15px;
+  line-height: 24px;
+  text-transform: none;
+  letter-spacing: 0px;
+  font-weight: 400;
+  color: #808080;
+
   padding: 20px 260px;
   text-align: center;
-  line-height: 1.4;
-  letter-spacing: 1.1px;
-  color: #292929;
-  opacity: 80%;
-
-  font-family: "poppins", sans-serif;
+  font-family: "raleway", sans-serif;
   margin-bottom: 30px;
-  font-size: 13px;
 }
 
 .couple_solo_img_section {
@@ -64,9 +65,10 @@
 
 .solo_name {
   text-align: center;
-  font-size: 20px;
-  color: #292929;
+  font-size: 18px;
+  color: #333;
   font-family: "poppins", sans-serif;
+  text-transform: capitalize;
   margin-top: 25px;
 }
 
@@ -75,8 +77,9 @@
   gap: 20px;
   align-items: center;
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 10px;
   color: #333;
+  opacity: 80%;
 
   margin-bottom: 40px;
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import Typewriter from "react-typewriter-effect";
 import "slick-carousel/slick/slick.css";
@@ -23,19 +23,37 @@ const settings = {
   cssEase: "linear", // Use linear easing for fade effect
   adaptiveHeight: true, // Adjust height dynamically
 };
+
 const ImageSlider = () => {
+  const [navbarSticky, setNavbarSticky] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 100) {
+      setNavbarSticky(true);
+    } else {
+      setNavbarSticky(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="slder">
-      <div className="naver">
-        <div className="nav">
+    <div className={`slder ${navbarSticky ? "sticky" : ""}`}>
+      <div className={`naver ${navbarSticky ? "sticky" : ""}`}>
+        <div className={`nav ${navbarSticky ? "sticky" : ""}`}>
           <div className="nav_left">
-            <h2 className="nav_title">sweety</h2>
+            <h2 className={`nav_title ${navbarSticky ? "sticky" : ""}`}>Janitha & Amanda</h2>
           </div>
           <div className="nav_right">
-            <ul className="nav_ul">
-              <li className="nav_li">
+            <ul className={`nav_ul ${navbarSticky ? "sticky" : ""}`}>
+              {/* <li className="nav_li">
                 home <CiHeart className="hearted" />{" "}
-              </li>
+              </li> */}
               <li className="nav_li">
                 <ScrollLink
                   to="story" // Specify the ID of the target element (footer in this case)
@@ -45,7 +63,7 @@ const ImageSlider = () => {
                   offset={-70}
                   duration={1500}
                 >
-                  our story <CiHeart className="hearted" />{" "}
+                  our story <CiHeart className={`hearted ${navbarSticky ? "sticky" : ""}`} />{" "}
                 </ScrollLink>
               </li>
               <li className="nav_li">
@@ -57,7 +75,7 @@ const ImageSlider = () => {
                   offset={-70}
                   duration={1500}
                 >
-                  when & where <CiHeart className="hearted" />{" "}
+                  when & where <CiHeart className={`hearted ${navbarSticky ? "sticky" : ""}`} />{" "}
                 </ScrollLink>
               </li>
               <li className="nav_li">
@@ -69,12 +87,10 @@ const ImageSlider = () => {
                   offset={-70}
                   duration={1500}
                 >
-                  our gallery <CiHeart className="hearted" />{" "}
+                  our gallery <CiHeart className={`hearted ${navbarSticky ? "sticky" : ""}`} />{" "}
                 </ScrollLink>
               </li>
-              <li className="nav_li">
-                event <CiHeart className="hearted" />{" "}
-              </li>
+
               <li className="nav_li">
                 <ScrollLink
                   to="rsvp" // Specify the ID of the target element (footer in this case)
@@ -84,7 +100,7 @@ const ImageSlider = () => {
                   offset={-70}
                   duration={1500}
                 >
-                  rsvp <CiHeart className="hearted" />{" "}
+                  rsvp <CiHeart className={`hearted ${navbarSticky ? "sticky" : ""}`} />{" "}
                 </ScrollLink>
               </li>
             </ul>

@@ -17,11 +17,7 @@ const Venue = () => {
           {ven.map((gal, index) => (
             <div className="hover-container">
               <div className="venue_sub_grid" key={index}>
-                <img
-                  className="hover-image"
-                  src="https://onelove.catanisthemes.com/wp-content/uploads/2017/02/home19-groom.jpg"
-                  alt=""
-                />
+                <img className="hover-image" src={gal.sec} alt="" />
                 <img className="venue_img" src={gal.url} alt="" />
 
                 <h2 className="venue_title">{gal.text}</h2>
@@ -34,16 +30,13 @@ const Venue = () => {
         </div>
         <div className="mapper">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.6560525938094!2d80.41288367386053!3d8.336931699440363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afcf508d0caa33f%3A0x381425a8aa4887a5!2sThe%20Lakeside%20Hotel%20at%20Nuwarawewa!5e0!3m2!1sen!2slk!4v1703409313799!5m2!1sen!2slk"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.818952832443!2d80.38435977386047!3d8.320782199675003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afcf4359e2c234d%3A0x58bc8c2df30a287f!2sGolden%20Mango!5e0!3m2!1sen!2slk!4v1703436172055!5m2!1sen!2slk"
             width="100%"
             height="450"
             style={{
               filter: "brightness(80%) contrast(100%)",
 
               border: "none",
-
-              // Adjust values based on your preference
-              /* Add any additional styles here */
             }}
             allowfullscreen=""
             loading="lazy"

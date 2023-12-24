@@ -8,6 +8,7 @@ import Venue from "../when/Venue";
 import Organize from "../orgnizer/Organize";
 import RsvpForm from "../mail/Rsvp";
 import Gift from "../Gift/Gift";
+import CustomCursor from "../top/Backtotop";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       <Organize />
       <Gift />
       <RsvpForm />
+      <CustomCursor />
     </div>
   );
 };
