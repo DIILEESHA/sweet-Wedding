@@ -5,7 +5,9 @@ import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 const Couple = () => {
   return (
     <div className="couple_container">
-      <h2 className="couple_story">our story</h2>
+      <h2 className="couple_story" id="story">
+        our story
+      </h2>
 
       <img
         src="

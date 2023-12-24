@@ -8,6 +8,7 @@ import "./ImageSlider.css";
 import { CiDesktopMouse2 } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import slid from "./slider.json";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 const settings = {
   infinite: true,
@@ -36,19 +37,55 @@ const ImageSlider = () => {
                 home <CiHeart className="hearted" />{" "}
               </li>
               <li className="nav_li">
-                our story <CiHeart className="hearted" />{" "}
+                <ScrollLink
+                  to="story" // Specify the ID of the target element (footer in this case)
+                  spy={true}
+                  smooth={true}
+                  style={{ cursor: "pointer" }}
+                  offset={-70}
+                  duration={1500}
+                >
+                  our story <CiHeart className="hearted" />{" "}
+                </ScrollLink>
               </li>
               <li className="nav_li">
-                when & where <CiHeart className="hearted" />{" "}
+                <ScrollLink
+                  to="when & where" // Specify the ID of the target element (footer in this case)
+                  spy={true}
+                  smooth={true}
+                  style={{ cursor: "pointer" }}
+                  offset={-70}
+                  duration={1500}
+                >
+                  when & where <CiHeart className="hearted" />{" "}
+                </ScrollLink>
               </li>
               <li className="nav_li">
-                our gallery <CiHeart className="hearted" />{" "}
+                <ScrollLink
+                  to="our gallery" // Specify the ID of the target element (footer in this case)
+                  spy={true}
+                  smooth={true}
+                  style={{ cursor: "pointer" }}
+                  offset={-70}
+                  duration={1500}
+                >
+                  our gallery <CiHeart className="hearted" />{" "}
+                </ScrollLink>
               </li>
               <li className="nav_li">
                 event <CiHeart className="hearted" />{" "}
               </li>
               <li className="nav_li">
-                rsvp <CiHeart className="hearted" />{" "}
+                <ScrollLink
+                  to="rsvp" // Specify the ID of the target element (footer in this case)
+                  spy={true}
+                  smooth={true}
+                  style={{ cursor: "pointer" }}
+                  offset={-70}
+                  duration={1500}
+                >
+                  rsvp <CiHeart className="hearted" />{" "}
+                </ScrollLink>
               </li>
             </ul>
           </div>
