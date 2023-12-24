@@ -1,0 +1,89 @@
+.venue_container {
+  padding: 70px 100px;
+  background-color: #f5ebeb;
+}
+
+.venue_grid {
+  display: grid;
+  margin-top: 40px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.venue_img {
+  width: 60px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  margin-top: 70px;
+  transition: transform 0.3s ease; /* Add a transition effect to smoothly scale the image */
+}
+
+.venue_sub_grid {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.3s ease; /* Add a transition effect to smoothly change the box shadow */
+}
+
+.venue_sub_grid:hover {
+  box-shadow: rgba(202, 202, 206, 0.2) 0px 7px 5px 0px;
+}
+
+.venue_sub_grid:hover .venue_img {
+  transform: scale(1.2); /* Scale the image on hover */
+}
+
+.venue_title {
+  color: #333;
+  font-family: "poppins", sans-serif;
+  text-transform: capitalize;
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-size: 18px;
+  z-index: 100;
+}
+
+.venue_other {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  margin: 5px 0;
+  opacity: 80%;
+}
+
+.venue_other:last-child {
+  margin-bottom: 70px;
+}
+.hover-container {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: background-color 1s ease-in-out;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-transition: background-color 1s ease-in-out;
+  -moz-transition: background-color 1s ease-in-out;
+  -ms-transition: background-color 1s ease-in-out;
+  -o-transition: background-color 1s ease-in-out;
+}
+
+.venue_sub_grid:hover .hover-image {
+  opacity: 0.4;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.mapper {
+  margin: 50px 0;
+}

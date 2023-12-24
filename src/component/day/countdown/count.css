@@ -9,15 +9,16 @@
 }
 
 .card_time {
-  padding: 40px;
+  padding: 50px;
   color: #292929;
-
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 5px;
   background-color: #fff;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  border: 1px solid #e4e2e2;
 }
 .card_time h1 {
   color: #70a076;

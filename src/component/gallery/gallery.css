@@ -4,7 +4,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   padding: 0 100px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .gallery_sub {
@@ -13,12 +13,15 @@
   cursor: pointer;
   overflow: hidden;
   position: relative;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .cu {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  background-position: center;
+  background-size: auto;
 }
 
 .image-overlay {

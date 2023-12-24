@@ -34,11 +34,12 @@ const GalleryComponent = () => {
 
       <div className="gallery_grid">
         {gallerio.map((gal, index) => (
-          <div className="gallery_sub" key={index}>
-            <div
-              className="image-overlay"
-              onClick={() => openLightbox(index)}
-            >
+          <div
+            className="gallery_sub"
+         
+            key={index}
+          >
+            <div className="image-overlay" onClick={() => openLightbox(index)}>
               <AiOutlinePlus className="plus-icon" />
             </div>
             <img

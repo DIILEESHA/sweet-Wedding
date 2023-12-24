@@ -1,15 +1,13 @@
-// ImageSlider.js
 import React from "react";
 import Slider from "react-slick";
+import Typewriter from "react-typewriter-effect";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { PrevArrow, NextArrow } from "./CustomArrows";
-import "./ImageSlider.css"; // Import the CSS file for styling
+import "./ImageSlider.css";
 import { CiDesktopMouse2 } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import slid from "./slider.json";
-
-import cursor from "../../gif/cursor.gif";
 
 const settings = {
   infinite: true,
@@ -68,6 +66,14 @@ const ImageSlider = () => {
 
                 <h2 className="deta_title">{doc.title}</h2>
                 <h3 className="deta_name">Janitha & Amanda</h3>
+                <Typewriter
+                  className="deta_name" // Add your custom class here
+                  options={{
+                    strings: ["Janitha & Amanda"],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
                 <img src="https://i.imgur.com/iThaubo.png" alt="" />
               </div>
               <div className="cursor"></div>
