@@ -73,6 +73,8 @@
 .form_input {
   width: 100%;
   border: 1px solid #ddd;
+  font-family: "poppins", sans-serif;
+  font-size: 15px;
   padding: 10px;
   height: 45px;
   border-radius: 3px;
@@ -82,6 +84,8 @@
 .form_input2 {
   width: 100%;
   border: 1px solid #ddd;
+  font-family: "poppins", sans-serif;
+  font-size: 15px;
   padding: 10px;
   height: 205px;
   border-radius: 3px;
@@ -124,12 +128,15 @@ select {
   color: #5e5b5b;
   font-family: "poppins", sans-serif;
   font-size: 15px;
+  background-color: transparent;
   cursor: pointer;
   border-radius: 3px;
   line-height: 3;
 }
 
 .select {
+  background-color: transparent;
+
   position: relative;
   display: block;
   width: 100%;
@@ -164,7 +171,8 @@ option {
 
 @media screen and (max-width: 750px) {
   .rsvp_form {
-    width: 90%;
+    width: 95%;
+    padding: 110px 20px;
   }
 }
 @media screen and (max-width: 500px) {

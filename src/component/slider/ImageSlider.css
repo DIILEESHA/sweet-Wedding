@@ -8,6 +8,19 @@
   position: relative;
 }
 
+.slder.sticky {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+}
+
 .naver {
   top: 0;
   /* position: sticky; */
@@ -17,6 +30,7 @@
   position: absolute;
   height: 70px;
   top: 0;
+  transition: all 0.5s ease-in-out;
   color: #ddd;
   display: flex;
   justify-content: space-between;
@@ -24,6 +38,10 @@
   padding: 0px 70px;
   align-items: center;
   width: 100%;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
 }
 
 /* sticky nav */
@@ -34,12 +52,7 @@
   top: 0;
   width: 100%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  transition: all 1s ease-in;
-  -webkit-transition: all 1s ease-in;
-  -moz-transition: all 1s ease-in;
-  -ms-transition: all 1s ease-in;
-  -o-transition: all 1s ease-in;
+  /* z-index: 1000; */
 }
 
 .slder.sticky .nav_ul {
@@ -272,10 +285,10 @@
   }
 
   .slder.sticky .nav {
-  /*position: sticky;
-  */transition: none;
-
-}
+    /*position: sticky;
+  */
+    transition: none;
+  }
 
   .nav_title {
     color: #333;

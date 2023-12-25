@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import Typewriter from "react-typewriter-effect";
 import "slick-carousel/slick/slick.css";
@@ -9,6 +9,7 @@ import { CiDesktopMouse2 } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import slid from "./slider.json";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { FaAlignRight } from "react-icons/fa";
 
 const settings = {
   infinite: true,
@@ -27,6 +28,7 @@ const settings = {
 const ImageSlider = () => {
   const [open, isOpen] = useState(false);
   const [navbarSticky, setNavbarSticky] = useState(false);
+  const sliderRef = useRef(null);
 
   const handleClicks = () => {
     // Scroll to the top of the SingleItemDetail component
@@ -37,12 +39,12 @@ const ImageSlider = () => {
     // Scroll to the top of the SingleItemDetail component
     window.scrollTo({ bottom: 0, behavior: "smooth" });
   };
-
   const handleScroll = () => {
-    if (window.scrollY > 5) {
-      setNavbarSticky(true);
-    } else {
-      setNavbarSticky(false);
+    const sliderElement = sliderRef.current;
+
+    if (sliderElement) {
+      const { top } = sliderElement.getBoundingClientRect();
+      setNavbarSticky(top < 0);
     }
   };
 
@@ -54,7 +56,7 @@ const ImageSlider = () => {
   }, []);
 
   return (
-    <div className={`slder ${navbarSticky ? "sticky" : ""}`}>
+    <div ref={sliderRef} className={`slder ${navbarSticky ? "sticky" : ""}`}>
       <div className={`naver ${navbarSticky ? "sticky" : ""}`}>
         <div className={`nav ${navbarSticky ? "sticky" : ""}`}>
           <div className="nav_left">
@@ -132,7 +134,7 @@ const ImageSlider = () => {
 
             <ul className="ela">
               <li className="right_l" onClick={() => isOpen(!open)}>
-                Menu
+                <FaAlignRight style={{ color: "#333", fontSize: "20px" }} />
               </li>
             </ul>
           </div>
