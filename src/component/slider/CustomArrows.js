@@ -19,7 +19,7 @@ const Arrow = ({ direction, onClick }) => {
     transform: "translateY(-50%)",
     zIndex: 1,
     cursor: "pointer",
-    color: "#ddd", // Arrow color
+ // Arrow color
     padding: "0px 10px",
   };
 

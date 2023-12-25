@@ -125,8 +125,8 @@
 .for {
   font-size: 30px;
   border-radius: 50%;
-  color: #b1aeae;
-  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  /* background-color: rgba(0, 0, 0, 0.3); */
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -232,14 +232,18 @@
     */
     visibility: visible;
     transition: 1s all ease;
-    z-index: 0;
-    opacity: 1;
+    /* opacity: 1; */
     background-color: #ffff;
+    z-index: 1000000;
   }
 
   .mobile_ul {
     display: flex;
     flex-direction: column;
+    font-family: "poppins", sans-serif;
+    color: #333;
+    opacity: 80%;
+    font-weight: 800;
 
     justify-content: space-evenly;
     padding: 40px 20px;
@@ -268,8 +272,10 @@
   }
 
   .slder.sticky .nav {
-    position: sticky;
-  }
+  /*position: sticky;
+  */transition: none;
+
+}
 
   .nav_title {
     color: #333;

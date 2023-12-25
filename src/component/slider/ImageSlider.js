@@ -15,9 +15,8 @@ const settings = {
   speed: 3000,
   slidesToShow: 1,
   slidesToScroll: 1,
-  dots:true,
   autoplay: true,
-  autoplaySpeed: 1200,
+  autoplaySpeed: 1400,
   prevArrow: <PrevArrow />,
   nextArrow: <NextArrow />,
   fade: true, // Set fade to true for a smooth transition
@@ -40,7 +39,7 @@ const ImageSlider = () => {
   };
 
   const handleScroll = () => {
-    if (window.innerWidth >= 960 && window.scrollY > 5) {
+    if (window.scrollY > 5) {
       setNavbarSticky(true);
     } else {
       setNavbarSticky(false);
@@ -147,25 +146,77 @@ const ImageSlider = () => {
                   className="mobile_li"
                   onClick={() => handleClicks && isOpen(!open)}
                 >
-                  work
+                  <ScrollLink
+                    to="story" // Specify the ID of the target element (footer in this case)
+                    spy={true}
+                    smooth={true}
+                    style={{ cursor: "pointer" }}
+                    offset={-70}
+                    duration={1500}
+                    onClick={() => isOpen(!open)}
+                  >
+                    our story{" "}
+                    <CiHeart
+                      className={`hearted ${navbarSticky ? "sticky" : ""}`}
+                    />{" "}
+                  </ScrollLink>
                 </li>
                 <li
                   className="mobile_li"
                   onClick={() => handleClicks && isOpen(!open)}
                 >
-                  service
+                  <ScrollLink
+                    to="when & where" // Specify the ID of the target element (footer in this case)
+                    spy={true}
+                    smooth={true}
+                    style={{ cursor: "pointer" }}
+                    offset={-70}
+                    duration={1500}
+                    onClick={() => isOpen(!open)}
+                  >
+                    when & where{" "}
+                    <CiHeart
+                      className={`hearted ${navbarSticky ? "sticky" : ""}`}
+                    />{" "}
+                  </ScrollLink>
                 </li>
                 <li
                   className="mobile_li"
                   onClick={() => handleClicks && isOpen(!open)}
                 >
-                  culture
+                  <ScrollLink
+                    to="our gallery" // Specify the ID of the target element (footer in this case)
+                    spy={true}
+                    smooth={true}
+                    style={{ cursor: "pointer" }}
+                    offset={-70}
+                    duration={1500}
+                    onClick={() => isOpen(!open)}
+                  >
+                    our gallery{" "}
+                    <CiHeart
+                      className={`hearted ${navbarSticky ? "sticky" : ""}`}
+                    />{" "}
+                  </ScrollLink>
                 </li>
                 <li
                   className="mobile_li"
                   onClick={() => handleClicksBottom && isOpen(!open)}
                 >
-                  contact
+                  <ScrollLink
+                    to="rsvp" // Specify the ID of the target element (footer in this case)
+                    spy={true}
+                    smooth={true}
+                    style={{ cursor: "pointer" }}
+                    offset={-70}
+                    duration={1500}
+                    onClick={() => isOpen(!open)}
+                  >
+                    rsvp{" "}
+                    <CiHeart
+                      className={`hearted ${navbarSticky ? "sticky" : ""}`}
+                    />{" "}
+                  </ScrollLink>
                 </li>
               </div>
 
@@ -180,8 +231,10 @@ const ImageSlider = () => {
                   }}
                 >
                   © 2023
-                  <del style={{ margin: "0px 5px" }}>10ISLANDS © 2023.</del>
-                  <br /> Made with passion by DILLEESHA
+                  <del style={{ margin: "0px 5px" }}>
+                    Janitha Amanda © 2023.
+                  </del>
+                  <br />
                 </h6>
               </div>
             </ul>
