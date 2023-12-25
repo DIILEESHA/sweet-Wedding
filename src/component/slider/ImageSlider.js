@@ -15,7 +15,8 @@ const settings = {
   speed: 3000,
   slidesToShow: 1,
   slidesToScroll: 1,
-  // autoplay: true,
+  dots:true,
+  autoplay: true,
   autoplaySpeed: 800,
   prevArrow: <PrevArrow />,
   nextArrow: <NextArrow />,
@@ -25,10 +26,21 @@ const settings = {
 };
 
 const ImageSlider = () => {
+  const [open, isOpen] = useState(false);
   const [navbarSticky, setNavbarSticky] = useState(false);
 
+  const handleClicks = () => {
+    // Scroll to the top of the SingleItemDetail component
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleClicksBottom = () => {
+    // Scroll to the top of the SingleItemDetail component
+    window.scrollTo({ bottom: 0, behavior: "smooth" });
+  };
+
   const handleScroll = () => {
-    if (window.scrollY > 100) {
+    if (window.innerWidth >= 960 && window.scrollY > 5) {
       setNavbarSticky(true);
     } else {
       setNavbarSticky(false);
@@ -47,7 +59,9 @@ const ImageSlider = () => {
       <div className={`naver ${navbarSticky ? "sticky" : ""}`}>
         <div className={`nav ${navbarSticky ? "sticky" : ""}`}>
           <div className="nav_left">
-            <h2 className={`nav_title ${navbarSticky ? "sticky" : ""}`}>Janitha & Amanda</h2>
+            <h2 className={`nav_title ${navbarSticky ? "sticky" : ""}`}>
+              Janitha & Amanda
+            </h2>
           </div>
           <div className="nav_right">
             <ul className={`nav_ul ${navbarSticky ? "sticky" : ""}`}>
@@ -63,7 +77,10 @@ const ImageSlider = () => {
                   offset={-70}
                   duration={1500}
                 >
-                  our story <CiHeart className={`hearted ${navbarSticky ? "sticky" : ""}`} />{" "}
+                  our story{" "}
+                  <CiHeart
+                    className={`hearted ${navbarSticky ? "sticky" : ""}`}
+                  />{" "}
                 </ScrollLink>
               </li>
               <li className="nav_li">
@@ -75,7 +92,10 @@ const ImageSlider = () => {
                   offset={-70}
                   duration={1500}
                 >
-                  when & where <CiHeart className={`hearted ${navbarSticky ? "sticky" : ""}`} />{" "}
+                  when & where{" "}
+                  <CiHeart
+                    className={`hearted ${navbarSticky ? "sticky" : ""}`}
+                  />{" "}
                 </ScrollLink>
               </li>
               <li className="nav_li">
@@ -87,7 +107,10 @@ const ImageSlider = () => {
                   offset={-70}
                   duration={1500}
                 >
-                  our gallery <CiHeart className={`hearted ${navbarSticky ? "sticky" : ""}`} />{" "}
+                  our gallery{" "}
+                  <CiHeart
+                    className={`hearted ${navbarSticky ? "sticky" : ""}`}
+                  />{" "}
                 </ScrollLink>
               </li>
 
@@ -100,9 +123,67 @@ const ImageSlider = () => {
                   offset={-70}
                   duration={1500}
                 >
-                  rsvp <CiHeart className={`hearted ${navbarSticky ? "sticky" : ""}`} />{" "}
+                  rsvp{" "}
+                  <CiHeart
+                    className={`hearted ${navbarSticky ? "sticky" : ""}`}
+                  />{" "}
                 </ScrollLink>
               </li>
+            </ul>
+
+            <ul className="ela">
+              <li className="right_l" onClick={() => isOpen(!open)}>
+                Menu
+              </li>
+            </ul>
+          </div>
+          <div
+            className="mobile_ul_section"
+            style={{ right: open ? "0px" : "-50000vw" }}
+          >
+            <ul className="mobile_ul">
+              <div className="mobala">
+                <li
+                  className="mobile_li"
+                  onClick={() => handleClicks && isOpen(!open)}
+                >
+                  work
+                </li>
+                <li
+                  className="mobile_li"
+                  onClick={() => handleClicks && isOpen(!open)}
+                >
+                  service
+                </li>
+                <li
+                  className="mobile_li"
+                  onClick={() => handleClicks && isOpen(!open)}
+                >
+                  culture
+                </li>
+                <li
+                  className="mobile_li"
+                  onClick={() => handleClicksBottom && isOpen(!open)}
+                >
+                  contact
+                </li>
+              </div>
+
+              <div className="susa">
+                <h6
+                  style={{
+                    fontSize: "11px",
+                    fontSmooth: "small",
+
+                    fontWeight: "500",
+                    lineHeight: "1.6",
+                  }}
+                >
+                  © 2023
+                  <del style={{ margin: "0px 5px" }}>10ISLANDS © 2023.</del>
+                  <br /> Made with passion by DILLEESHA
+                </h6>
+              </div>
             </ul>
           </div>
         </div>

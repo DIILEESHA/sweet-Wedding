@@ -10,6 +10,7 @@
 
 .naver {
   top: 0;
+  /* position: sticky; */
 }
 
 .nav {
@@ -85,7 +86,6 @@
   gap: 30px;
   align-items: center;
   color: #fff;
-  
 }
 
 .nav_li {
@@ -205,4 +205,133 @@
   top: 0;
 
   background: linear-gradient(to top, rgba(32, 32, 32, 0) -2%, #242323 260.17%);
+}
+
+.mobile_ul_section,
+.right_l {
+  display: none;
+}
+
+@media screen and (max-width: 958px) {
+  .nav {
+    padding: 0 30px;
+  }
+
+  .mobile_ul_section {
+    position: fixed;
+    border-top: 1px solid #636161;
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    /*padding: 40px 20px;
+    */
+    height: 100vh;
+    top: 68px;
+    right: 0;
+    display: flex;
+    /*padding: 0 20px;
+    */
+    visibility: visible;
+    transition: 1s all ease;
+    z-index: 0;
+    opacity: 1;
+    background-color: #ffff;
+  }
+
+  .mobile_ul {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-evenly;
+    padding: 40px 20px;
+    /* align-items: center; */
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+
+  .mobala {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .mobile_li {
+    font-size: 20px;
+    list-style: none;
+  }
+  .nav {
+    height: 70px;
+    color: #333;
+    position: sticky;
+    top: 0;
+  }
+
+  .slder.sticky .nav {
+    position: sticky;
+  }
+
+  .nav_title {
+    color: #333;
+  }
+
+  .linka {
+    cursor: none;
+  }
+
+  .right_l {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    text-transform: uppercase;
+    /* margin: 0 20px; */
+    font-weight: 300;
+  }
+
+  .nav_container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .right_ul {
+    align-items: center;
+    display: flex;
+  }
+
+  .ela {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav_ul li,
+  .right_ul .right_li {
+    display: none;
+    flex: 0;
+  }
+
+  .nav_title {
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 848px) {
+  .deta_name {
+    width: 40%;
+    margin: 0 auto;
+    line-height: 1;
+    display: flex;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .deta_name {
+    font-size: 50px;
+    line-height: 1.5;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
 }

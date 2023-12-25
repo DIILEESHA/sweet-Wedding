@@ -16,14 +16,13 @@ const Home = () => {
       <ImageSlider />
       <Event />
 
-      <Couple />
-      <MusicPlayer />
+      {/* <MusicPlayer />
       <Gallery />
       <Venue />
       <Organize />
       <Gift />
       <RsvpForm />
-      <CustomCursor />
+      <CustomCursor /> */}
     </div>
   );
 };

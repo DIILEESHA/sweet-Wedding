@@ -20,7 +20,7 @@ const Arrow = ({ direction, onClick }) => {
     zIndex: 1,
     cursor: "pointer",
     color: "#ddd", // Arrow color
-    padding: "0px 70px",
+    padding: "0px 30px",
   };
 
   return (

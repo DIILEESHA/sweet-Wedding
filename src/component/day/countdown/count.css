@@ -24,3 +24,13 @@
   color: #70a076;
   font-size: 28px;
 }
+
+@media screen and (max-width: 770px) {
+  .card_container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card_time:nth-child(4) {
+    grid-column: 2/3;
+  }
+}
