@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import Typewriter from "react-typewriter-effect";
 import "slick-carousel/slick/slick.css";
@@ -28,7 +28,6 @@ const settings = {
 const ImageSlider = () => {
   const [open, isOpen] = useState(false);
   const [navbarSticky, setNavbarSticky] = useState(false);
-  const sliderRef = useRef(null);
 
   const handleClicks = () => {
     // Scroll to the top of the SingleItemDetail component
@@ -39,12 +38,12 @@ const ImageSlider = () => {
     // Scroll to the top of the SingleItemDetail component
     window.scrollTo({ bottom: 0, behavior: "smooth" });
   };
-  const handleScroll = () => {
-    const sliderElement = sliderRef.current;
 
-    if (sliderElement) {
-      const { top } = sliderElement.getBoundingClientRect();
-      setNavbarSticky(top < 0);
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setNavbarSticky(true);
+    } else {
+      setNavbarSticky(false);
     }
   };
 
@@ -56,7 +55,7 @@ const ImageSlider = () => {
   }, []);
 
   return (
-    <div ref={sliderRef} className={`slder ${navbarSticky ? "sticky" : ""}`}>
+    <div className={`slder ${navbarSticky ? "sticky" : ""}`}>
       <div className={`naver ${navbarSticky ? "sticky" : ""}`}>
         <div className={`nav ${navbarSticky ? "sticky" : ""}`}>
           <div className="nav_left">
@@ -251,19 +250,20 @@ const ImageSlider = () => {
               <img alt={doc.title} src={doc.image} className="slide-image" />
 
               <div className="deta">
-                <img src="https://i.imgur.com/6UgVzEQ.png" alt="" />
+                <img
+                  src="https://i.imgur.com/6UgVzEQ.png"
+                  alt={doc.title}
+                  loading="lazy"
+                />
 
                 <h2 className="deta_title">{doc.title}</h2>
                 <h3 className="deta_name">Janitha & Amanda</h3>
-                <Typewriter
-                  className="deta_name" // Add your custom class here
-                  options={{
-                    strings: ["Janitha & Amanda"],
-                    autoStart: true,
-                    loop: true,
-                  }}
+
+                <img
+                  src="https://i.imgur.com/iThaubo.png"
+                  alt=""
+                  loading="lazy"
                 />
-                <img src="https://i.imgur.com/iThaubo.png" alt="" />
               </div>
               <div className="cursor"></div>
             </div>

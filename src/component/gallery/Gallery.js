@@ -43,13 +43,14 @@ const GalleryComponent = () => {
             <div className="image-overlay" onClick={() => openLightbox(index)}>
               <AiOutlinePlus className="plus-icon" />
             </div>
-           <img
-              className="cu"
-              src={gal.url}
-              alt=""
-              onClick={() => openLightbox(index)}
-            />
-           </div>
+              <img
+                className="cu"
+                src={gal.url}
+                loading="lazy"
+                alt=""
+                onClick={() => openLightbox(index)}
+              />
+          </div>
         ))}
       </div>
 

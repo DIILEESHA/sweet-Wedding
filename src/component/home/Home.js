@@ -15,10 +15,10 @@ const Home = () => {
     <div>
       <ImageSlider />
       <Event />
-      <MusicPlayer />
       <Gallery />
       <Venue />
       <Gift />
+      <MusicPlayer />
       <CustomCursor />
       <RsvpForm />
     </div>

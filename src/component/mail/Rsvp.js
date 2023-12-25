@@ -4,6 +4,7 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 const Rsvp = () => {
   const formref = useRef();
   const [done, setdone] = useState(false);
@@ -29,11 +30,11 @@ const Rsvp = () => {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "dark",
+            theme: "light",
           });
         },
         (error) => {
-          toast.error("🦄Try Again!", {
+          toast.error(" No Internet Connection, Try Again!", {
             position: "top-center",
             autoClose: 5000,
             hideProgressBar: false,
@@ -41,7 +42,7 @@ const Rsvp = () => {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "dark",
+            theme: "light",
           });
         }
       );
@@ -58,10 +59,12 @@ const Rsvp = () => {
         "
           className="rsvp_form"
         >
+          <ToastContainer />
           <h2 className="couple_story">Will You Attend!</h2>
 
           <img
             src="https://i.imgur.com/OA7vHkn.png"
+            loading="lazy"
             alt=""
             className="flower"
           />
@@ -160,7 +163,7 @@ const Rsvp = () => {
           <button className="submit">submit now</button>
 
           <div className="event_bottom  xy">
-            <img src="https://i.imgur.com/2fGT61B.png" alt="" />
+            <img src="https://i.imgur.com/2fGT61B.png" loading="lazy" alt="" />
           </div>
         </form>
       </div>

@@ -11,14 +11,14 @@ const Venue = () => {
           When & Where
         </h2>
 
-        <img src="https://i.imgur.com/OA7vHkn.png" alt="" className="flower" />
+        <img src="https://i.imgur.com/OA7vHkn.png" alt="" className="flower" loading="lazy"/>
 
         <div className="venue_grid">
           {ven.map((gal, index) => (
             <div className="hover-container">
               <div className="venue_sub_grid" key={index}>
                 <img className="hover-image" src={gal.sec} alt="" />
-                <img className="venue_img" src={gal.url} alt="" />
+                <img className="venue_img" src={gal.url} alt={gal.text} loading="lazy"/>
 
                 <h2 className="venue_title">{gal.text}</h2>
                 <h3 className="venue_other">{gal.day}</h3>

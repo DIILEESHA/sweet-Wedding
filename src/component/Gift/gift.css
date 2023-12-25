@@ -12,7 +12,6 @@
 .gift_sub {
   /* height: 50vh; */
   width: 100%;
-  padding: 20px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -24,8 +23,9 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .gift_img {
-  width: 200px;
-  height: 200px;
+  padding: 20px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   -webkit-border-radius: 50%;
@@ -64,14 +64,21 @@
   }
 }
 @media screen and (max-width: 681px) {
-
   .gift_grid {
     padding: 30px;
+
     overflow-y: scroll;
+    /* overflow: hidden; */
+    /* overflow-x: hidden; */
+    /* overflow-x: hidden; */
+  }
+  .gift_sub{
+    width: 260px;
   }
   .gift_img {
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
+    /* border: 1px solid #eeebeb; */
   }
   .gift_title {
     font-size: 25px;

@@ -53,20 +53,22 @@
 
 @media screen and (max-width: 650px) {
   .event_para1 {
-    font-size: 25px;
+    font-size: 22px;
   }
 
-  .event_para{
+  .event_para {
     font-size: 15px;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .event_container {
+    padding: 50px;
+  }
   .couple_story {
     font-size: 40px;
     font-weight: 500;
   }
- 
 }
 @media screen and (max-width: 585px) {
   .event_bottom img {

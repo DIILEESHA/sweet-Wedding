@@ -7,18 +7,24 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fakeLogin = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 3000));
-      setLoading(false);
+    const fetchData = async () => {
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
     };
 
-    fakeLogin();
+    fetchData();
   }, []);
 
   return (
     <div className="App">
-      {loading ? <Spinner /> : null}
-      <Home />
+      {loading ? (
+        <Spinner />
+      ) : (
+        <div>
+          <Home />
+        </div>
+      )}
     </div>
   );
 }

@@ -18,10 +18,12 @@
 
   position: relative;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background: linear-gradient(to top, rgba(32, 32, 32, 0) -2%, #242323 260.17%);
 }
 
-.movies {
+.ex {
   height: 100%;
+  /* position: relative; */
 }
 
 .cu {
@@ -29,7 +31,22 @@
   width: 100%;
   object-fit: cover;
   background-position: center;
-  background-size: auto;
+  /*position: relative;
+  */
+}
+
+.e::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 .image-overlay {
@@ -99,7 +116,6 @@
     height: 40vh;
   }
 
-  
   .couple_para {
     padding: 0 80px;
   }

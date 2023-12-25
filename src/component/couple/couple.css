@@ -87,3 +87,11 @@
 .ico {
   cursor: pointer;
 }
+
+@media screen and (max-width: 550px) {
+  .couple_story {
+    font-size: 39px;
+    color: #333;
+    opacity: 90%;
+  }
+}
