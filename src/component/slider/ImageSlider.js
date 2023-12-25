@@ -17,7 +17,7 @@ const settings = {
   slidesToScroll: 1,
   dots:true,
   autoplay: true,
-  autoplaySpeed: 800,
+  autoplaySpeed: 1200,
   prevArrow: <PrevArrow />,
   nextArrow: <NextArrow />,
   fade: true, // Set fade to true for a smooth transition

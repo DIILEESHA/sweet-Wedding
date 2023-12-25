@@ -50,3 +50,29 @@
   margin-bottom: 10px;
   font-size: 16px;
 }
+@media screen and (max-width: 1070px) {
+  .gift_grid {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 958px) {
+  .gift_grid {
+    padding: 50px;
+    overflow-y: scroll;
+  }
+}
+@media screen and (max-width: 681px) {
+
+  .gift_grid {
+    padding: 30px;
+    overflow-y: scroll;
+  }
+  .gift_img {
+    width: 180px;
+    height: 180px;
+  }
+  .gift_title {
+    font-size: 25px;
+  }
+}

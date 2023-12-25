@@ -28,9 +28,26 @@
 @media screen and (max-width: 770px) {
   .card_container {
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 
   .card_time:nth-child(4) {
     grid-column: 2/3;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card_container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px;
+    gap: 20px;
+  }
+  .card_time {
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card_container {
+    gap: 15px;
   }
 }

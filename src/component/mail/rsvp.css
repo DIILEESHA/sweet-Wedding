@@ -60,7 +60,7 @@
 }
 
 .form_sub_grid {
-  width: 100%;
+  /* width: 100%; */
 }
 
 .form_sub_grid:nth-child(3) {
@@ -126,16 +126,50 @@ select {
   font-size: 15px;
   cursor: pointer;
   border-radius: 3px;
+  line-height: 3;
 }
 
 .select {
   position: relative;
   display: block;
-  line-height: 3;
+  width: 100%;
   overflow: hidden;
   border-radius: 0.25em;
   padding-bottom: 10px;
+  box-sizing: border-box;
 }
 .opt:hover {
   background-color: rgb(207, 207, 205);
+}
+option {
+  width: 100%;
+}
+
+.opt {
+}
+@media screen and (max-width: 1150px) {
+  .rsvp_form {
+    width: 70%;
+  }
+  .form_container {
+    margin-top: -200px;
+  }
+}
+
+@media screen and (max-width: 895px) {
+  .rsvp_form {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .rsvp_form {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .form_grid {
+    display: flex;
+    flex-direction: column;
+  }
 }

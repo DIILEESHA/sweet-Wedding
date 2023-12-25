@@ -101,3 +101,35 @@
   color: #fff;
   font-weight: 900;
 }
+
+@media screen and (max-width: 1070px) {
+  .venue_container {
+    padding: 70px 50px;
+  }
+
+  .gallery_sub {
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .venue_container {
+    padding: 70px 30px;
+  }
+
+  .venue_grid {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 738px) {
+  .venue_grid {
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 618px) {
+  .venue_grid {
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+}

@@ -164,16 +164,7 @@ const Rsvp = () => {
           </div>
         </form>
       </div>
-      <p className="copyright">
-      &copy; 2023. Design By
-        <a
-          className="linka"
-          href="https://www.facebook.com/profile.php?id=61554751832836&mibextid=rS40aB7S9Ucbxw6v"
-        >
-          SynthSoftSolutions❤️
-        </a>
-        All Rights Reserved.
-      </p>
+      <p className="copyright">&copy; 2023. All Rights Reserved.</p>
     </div>
   );
 };
