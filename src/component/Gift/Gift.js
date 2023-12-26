@@ -1,6 +1,7 @@
 import React from "react";
 import "./gift.css";
 import gif from "./gif.json";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Gift = () => {
   return (
@@ -23,7 +24,16 @@ const Gift = () => {
               alt={g.title}
               loading="lazy"
             />
-            <h2 className="gift_title2">{g.sub}</h2>
+            <div className="al">
+              <h2 className="gift_title2">{g.sub}</h2>
+
+              <a href={g.link} target="_blank">
+                <FaExternalLinkAlt
+                  className="aller"
+                  title="Visit us on Facebook"
+                />
+              </a>
+            </div>
             <h2 className="gift_title">{g.title}</h2>
           </div>
         ))}

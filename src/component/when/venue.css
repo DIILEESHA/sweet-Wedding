@@ -86,6 +86,92 @@
   -o-transition: background-color 1s ease-in-out;
 }
 
+.address {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  font-family: "poppins", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.address_section {
+  color: #333;
+  margin: 40px 0 0px 0px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "raleway", sans-serif;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0px 20px 0;
+  border: 1px dotted #cecccc;
+  border-radius: 5px;
+  /*background-color: #fff;
+  */
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.hoteler {
+  font-size: 19px;
+  opacity: 80%;
+  line-height: 1.4;
+}
+
+.contact_person {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.coco {
+  width: 120px;
+
+  height: 120px;
+  object-fit: cover;
+  border: 2px solid #dfdbdb;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.co_sub {
+  background-color: #eeebeb;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border: 1px solid #eeebeb;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  padding: 20px;
+}
+
+.coco_name {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  font-family: "poppins", sans-serif;
+}
+.coco_name1 {
+  font-size: 16px;
+  text-align: center;
+
+  color: #333;
+  font-family: "raleway", sans-serif;
+}
 .venue_sub_grid:hover .hover-image {
   opacity: 0.9;
   background-color: rgba(0, 0, 0, 0.7);
@@ -121,6 +207,16 @@
     gap: 20px;
   }
 }
+
+@media screen and (max-width: 780px) {
+  .contact_person {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .co_sub:nth-child(4) {
+    grid-column: 2/3;
+  }
+}
 @media screen and (max-width: 738px) {
   .venue_grid {
     gap: 20px;
@@ -131,5 +227,28 @@
   .venue_grid {
     gap: 20px;
     grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contact_person {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .co_sub:nth-child(4) {
+    /* grid-column: 2/3; */
+  }
+
+  .hoteler {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .contact_person {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .co_sub:nth-child(4) {
+    /* grid-column: 2/3; */
   }
 }

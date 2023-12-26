@@ -3,24 +3,28 @@
     "id": 1,
     "img": "https://i.imgur.com/l8UQ9s2.png",
     "title": "salon",
-    "sub":"Milota Bridals "
+    "sub": "Milota Bridals ",
+    "link": "https://www.facebook.com/milotabridals?mibextid=ZbWKwL"
   },
   {
     "id": 2,
     "img": "https://i.imgur.com/SrjRpls.jpg",
     "title": "Photography",
-    "sub":"Elite Pictures "
+    "sub": "Elite Pictures ",
+    "link": "https://www.facebook.com/elitepicturesstudio?mibextid=ZbWKwL"
   },
   {
     "id": 3,
     "img": "https://i.imgur.com/kKSya8w.jpg",
     "title": "Music",
-    "sub":"Vibrate Acoustica "
+    "sub": "Vibrate Acoustica ",
+    "link": "https://www.facebook.com/lalanwithvibrate?mibextid=ZbWKwL"
   },
   {
     "id": 4,
     "img": "https://i.imgur.com/0FRPbcD.png",
     "title": "flora",
-    "sub":"Heshan Flora"
+    "sub": "Heshan Flora",
+    "link": "https://www.facebook.com/profile.php?id=100063578574483&mibextid=ZbWKwL"
   }
 ]

@@ -51,6 +51,18 @@
   margin-bottom: 10px;
   font-size: 16px;
 }
+
+.al {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  justify-content: center;
+}
+.aller {
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+}
 @media screen and (max-width: 1070px) {
   .gift_grid {
     padding: 50px;
@@ -72,7 +84,7 @@
     /* overflow-x: hidden; */
     /* overflow-x: hidden; */
   }
-  .gift_sub{
+  .gift_sub {
     width: 260px;
   }
   .gift_img {
